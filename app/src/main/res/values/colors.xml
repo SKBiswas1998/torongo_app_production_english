@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#fcfbfb</color>
+    <color name="tabcolour">#9c9c9c</color>
+    <color name="black">#000</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#00FF00</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="moonalert">#e7651a</color>
+    <color name="red">#e70f0f</color>
+    <color name="redf">#f6861f</color>
+    <color name="serach">#64aee0</color>
+    <color name="favorite">#69bd45</color>
+    <color name="splashColor">#06b8fd</color>
+    <color name="whitesetup">#edecec</color>
+    <color name="alerttra">#50000000</color>
+    <color name="subscriberadiobutton">#218e01</color>
+    <color name="btmNavigation">#D6D670</color>
+    <color name="popuptextbgcolor">#EF4423</color>
+</resources>

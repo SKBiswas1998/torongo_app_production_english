@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/popupunsyb">
+
+        <TextView
+            android:id="@+id/txt_ScribHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/please_subscribe_ex"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_very_mlarge"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold|italic" />
+
+
+
+        <TextView
+            android:id="@+id/txt_ScribContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_ScribHead"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="45dp"
+            android:gravity="center"
+            android:text="@string/subsubtext"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="@dimen/text_very_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/img_subscribe_Continue"
+            android:layout_width="190dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txt_ScribContent"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bct_open_bg"
+            android:textColor="@color/white"
+            android:text="@string/conti"
+            android:textAllCaps="true"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:textSize="@dimen/text_very_large" />
+
+        <TextView
+            android:id="@+id/img_subscribe_Cancel"
+            android:layout_width="190dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txt_ScribContent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bct_open_bg"
+            android:textColor="@color/white"
+            android:text="@string/not_now"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:textSize="@dimen/text_very_large" />
+    </RelativeLayout>
+</LinearLayout>

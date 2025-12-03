@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_book_card_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/layout_medium_margin"
+    android:layout_marginBottom="@dimen/layout_medium_margin"
+    android:keepScreenOn="true"
+    android:gravity="center"
+    android:nestedScrollingEnabled="true">
+
+    <ImageView
+        android:id="@+id/imgBookCoverFavoraites"
+        android:layout_width="@dimen/size_avatar_toolbar"
+        android:layout_height="@dimen/size_avatar_toolbar"
+        android:layout_toRightOf="@+id/imgBookCover"
+        android:layout_marginLeft="@dimen/fav_icon_margin_left"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/favorite_unselected"
+        android:elevation="3dp" />
+
+    <ImageView
+        android:id="@+id/imgBookCover"
+        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"/>
+
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/imgBookCover"
+        android:layout_marginTop="-16dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bct_get_bg"
+            android:gravity="center"
+            android:text="@string/get"
+
+            android:textColor="#D50B0B"
+            android:textSize="@dimen/text_medium" />
+
+        <ProgressBar
+            android:id="@+id/progress_DownloadBook"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:maxHeight="50dip"
+            android:minHeight="50dip"
+            android:progress="5"
+            android:visibility="gone"
+            android:max="100"
+            android:progressDrawable="@drawable/fake_progress_bar"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

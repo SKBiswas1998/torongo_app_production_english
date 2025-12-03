@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_LibraryView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".Activity.LibraryViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        tools:targetApi="lollipop">
+
+
+        <ImageView
+            android:id="@+id/img_toolbarTile"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/thelovelandheader"
+            android:layout_margin="5dp"
+            android:paddingLeft="15dp"
+            android:layout_gravity="center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/relative_Search"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/et_toolbarTile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/edittext"
+                android:drawableLeft="@drawable/ic_search"
+                android:hint="@string/hintSearchMess"
+                android:imeOptions="actionDone"
+                android:paddingLeft="15dp"
+                android:paddingRight="40dp"
+                android:singleLine="true"
+                android:textColorHint="@color/serach" />
+            <ImageView
+                android:id="@+id/img_textEmpty"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cross"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/img_shadowBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/yellow_shadow1"
+        android:layout_below="@+id/toolBar_activity"
+        android:elevation="2dp"
+        android:alpha="0.5"
+        />
+    <FrameLayout
+        android:id="@+id/view_fragmentContatiner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lin_customTab"
+        android:layout_below="@+id/toolBar_activity" />
+    <ImageView
+        android:id="@+id/tabShadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin_customTab"
+        android:background="@drawable/yellow_shadow2"
+        android:elevation="2dp"
+        android:alpha="0.5"/>
+    <LinearLayout
+        android:id="@+id/lin_customTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xxlarge"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:background="@drawable/tab_unselected_bg"
+            android:src="@drawable/home_unselected" />
+
+      <View
+          android:layout_width="2dp"
+          android:layout_height="match_parent"
+          android:background="@color/black"/>
+        <ImageView
+            android:id="@+id/tab_cast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:background="@drawable/tab_unselected_bg"
+            android:src="@drawable/casts_unselected" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <ImageView
+            android:id="@+id/tab_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:background="@drawable/tab_unselected_bg"
+            android:src="@drawable/search_unselected" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <ImageView
+            android:id="@+id/tab_subscribe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:background="@drawable/tab_unselected_bg"
+            android:src="@drawable/subscribe_unselected" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+        <ImageView
+            android:id="@+id/tab_favorites"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:background="@drawable/tab_unselected_bg"
+            android:src="@drawable/favorite_unselected" />
+
+    </LinearLayout>
+</RelativeLayout>

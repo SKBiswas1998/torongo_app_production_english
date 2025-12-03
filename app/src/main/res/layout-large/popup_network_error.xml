@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/erroralert">
+
+        <TextView
+            android:id="@+id/txt_popNetworkError"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/networklabel"
+            android:textColor="@color/moonalert"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_popCancel"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/txt_popNetworkError"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/cancel" />
+
+
+        <ImageView
+            android:id="@+id/img_popRetry"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/txt_popNetworkError"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="75dp"
+            android:layout_toRightOf="@+id/img_popCancel"
+            android:src="@drawable/retry" />
+
+        <ImageView
+            android:id="@+id/img_popRetryForFTUE"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/txt_popNetworkError"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:visibility="gone"
+            android:src="@drawable/retry" />
+    </RelativeLayout>
+</LinearLayout>

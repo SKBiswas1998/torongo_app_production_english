@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bgnewdownload">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_OkBookDownCompButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_textContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="165dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ok" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

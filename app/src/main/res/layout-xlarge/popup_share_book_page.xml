@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sharepbabg">
+
+
+        <ImageView
+            android:id="@+id/img_popSharePage"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp"
+            android:src="@drawable/sharethispage" />
+
+        <ImageView
+            android:id="@+id/img_popShareBook"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/img_popSharePage"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sharethisbook" />
+
+        <ImageView
+            android:id="@+id/img_popShareApp"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/img_popShareBook"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/sharethisapp" />
+
+        <TextView
+            android:id="@+id/img_popShareCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_popShareApp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_very_large"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+</LinearLayout>

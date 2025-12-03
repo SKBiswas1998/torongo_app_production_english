@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@drawable/home_unselected"
+        android:title=""
+        />
+    <item
+        android:id="@+id/tab_favorites"
+        android:icon="@drawable/favorite_unselected"
+        android:title=""
+        />
+    <item
+        android:id="@+id/tab_search"
+        android:icon="@drawable/search_unselected"
+        android:title=""/>
+
+    <item
+        android:id="@+id/tab_subscribe"
+        android:icon="@drawable/favorite_unselected"
+        android:title=""
+        />
+</menu>

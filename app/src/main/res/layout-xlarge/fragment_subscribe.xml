@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsubs"
+    android:keepScreenOn="true"
+    tools:context=".Fragment.SubscribeFragment">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/englisharial"
+        android:text="@string/please_subscribe"
+        android:textColor="@color/black"
+        android:textSize="@dimen/spacing_xlarge"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_userInteraction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/layout_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/englisharial"
+            android:letterSpacing="0.1"
+            android:text="Options"
+            android:textColor="@color/black"
+            android:textSize="@dimen/spacing_xlarge"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_ChooseSubsccription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/mMonthRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@drawable/bg_radio_button"
+                android:checked="true"
+                android:text="@string/submonth"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_very_mlarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:text="@string/sutext"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+
+            <RadioButton
+                android:id="@+id/mYearRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:button="@drawable/bg_radio_button"
+                android:text="@string/yearsub"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_very_mlarge"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDiscountOnYearSubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:text="@string/subtextyear"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/mDoneSubsc"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="360dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bct_open_bg"
+            android:fontFamily="@font/myriad"
+            android:gravity="center"
+            android:text="@string/sub_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spacing_xlarge"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/mcancelSubscr"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/bct_get_bg"
+            android:fontFamily="@font/myriad"
+            android:gravity="center"
+            android:text="@string/later"
+            android:textColor="@color/red"
+            android:textSize="@dimen/spacing_xlarge"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_FreeApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/free_app_text"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/img_ch1"
+        android:layout_width="218dp"
+        android:layout_height="204dp"
+        android:src="@drawable/ch1"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_ch2"
+        android:layout_width="218dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ch2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_ch3"
+        android:layout_width="218dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ch3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/layout_userInteraction"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_ch4"
+        android:layout_width="218dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ch4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/layout_userInteraction"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

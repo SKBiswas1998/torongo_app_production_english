@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsubs"
+    android:keepScreenOn="true"
+    tools:context=".Fragment.SubscribeFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/englisharial"
+        android:text="@string/please_subscribe"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_very_large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_userInteraction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/englisharial"
+                android:text="@string/options"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_very_large"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+            <RadioGroup
+                android:id="@+id/rg_ChooseSubsccription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/mMonthRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@drawable/bg_radio_button"
+                    android:checked="true"
+                    android:text="@string/submonth"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/sutext"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/mYearRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:button="@drawable/bg_radio_button"
+                    android:text="@string/yearsub"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDiscountOnYearSubscription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/subtextyear"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/mDoneSubsc"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bct_open_bg"
+                android:fontFamily="@font/myriad"
+                android:gravity="center"
+                android:text="@string/sub_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/mcancelSubscr"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/bct_get_bg"
+                android:fontFamily="@font/myriad"
+                android:gravity="center"
+                android:text="@string/later"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_FreeApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/free_app_text"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0." />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/img_ch1"
+        android:layout_width="114dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ch1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/img_ch2"
+        android:layout_width="114dp"
+        android:layout_height="122dp"
+        android:src="@drawable/ch2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/img_ch3"
+        android:layout_width="114dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ch3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_userInteraction" />
+
+    <ImageView
+        android:id="@+id/img_ch4"
+        android:layout_width="114dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ch4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/layout_userInteraction" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

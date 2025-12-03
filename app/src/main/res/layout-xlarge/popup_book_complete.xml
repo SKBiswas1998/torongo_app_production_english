@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sharepopup">
+
+        <TextView
+            android:id="@+id/img_popRateTheApp"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            android:alpha="1"
+            android:background="@drawable/popuptext_bg"
+            android:text="@string/rate_this_app"
+            android:textSize="@dimen/text_very_mlarge"
+            android:gravity="center"
+            android:fontFamily="@font/myriad"
+            android:textStyle="italic"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/img_popSubscribe"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_popRateTheApp"
+            android:layout_centerHorizontal="true"
+            android:alpha="1"
+            android:layout_marginTop="@dimen/spacing_double"
+            android:background="@drawable/popuptext_bg"
+            android:text="@string/subscrib"
+            android:textSize="@dimen/text_very_mlarge"
+            android:gravity="center"
+            android:fontFamily="@font/myriad"
+            android:textStyle="italic"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/img_popDone"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_popSubscribe"
+            android:layout_centerHorizontal="true"
+            android:text="@string/done"
+            android:layout_marginTop="@dimen/spacing_double"
+            android:gravity="center"
+            android:fontFamily="@font/myriad"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:textSize="@dimen/text_very_large"
+            android:background="@drawable/popuptext_bg" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_cast"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:layout_margin="5dp">
+    <ImageView
+        android:id="@+id/imgCastAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:id="@+id/txtCastAvatarName"
+        android:layout_width="@dimen/badge_height"
+        android:layout_height="@dimen/spacing_xlarge"
+        android:text="hekki"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgCastAvatar"
+        android:background="@drawable/bct_get_bg"
+        android:textColor="@color/red"
+        android:layout_marginTop="-15dp"/>
+</RelativeLayout>

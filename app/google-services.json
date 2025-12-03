@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "465541337659",
+    "firebase_url": "https://library-enmonnfamily.firebaseio.com",
+    "project_id": "library-enmonnfamily",
+    "storage_bucket": "library-enmonnfamily.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465541337659:android:4d0fcf7b94e67df23cc21e",
+        "android_client_info": {
+          "package_name": "com.monnfamily.enlibraryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465541337659-gi3cu2of54u5oi5oaf9dha0m4a82msro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monnfamily.enlibraryapp",
+            "certificate_hash": "8f2dde9e25be42c411dcb8c1a046eca2e3d4234e"
+          }
+        },
+        {
+          "client_id": "465541337659-jut0so1ekatc8utlkqtr526fcsfp2opq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxQ2LbnuhzTLqKawyWfQ8yJS2r8b63L5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465541337659-jut0so1ekatc8utlkqtr526fcsfp2opq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
