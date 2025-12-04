@@ -23,7 +23,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.ProductDetails;
 import com.monnfamily.enlibraryapp.Activity.LibraryViewActivity;
 import com.monnfamily.enlibraryapp.Activity.PageActivity;
 import com.monnfamily.enlibraryapp.Constants.Constant;
@@ -145,13 +145,13 @@ public class SubscribeFragment extends Fragment implements PurchaseHelper.Purcha
 
         if (App.get().getPurchaseHelper().isServiceConnected()) {
 
-            SkuDetails tMonthSKU = App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.monthly_purchased);
-            SkuDetails tYearSKU = App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.yearly_purchased);
+            ProductDetails tMonthSKU = App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.monthly_purchased);
+            ProductDetails tYearSKU = App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.yearly_purchased);
 
             if (tMonthSKU != null)
-                tMonthValue = "  " + tMonthSKU.getOriginalPrice();
+                tMonthValue = "  " + tMonthSKU.getSubscriptionOfferDetails().get(0).getPricingPhases().getPricingPhaseList().get(0).getFormattedPrice();
             if (tYearSKU != null)
-                tYearValue = "  " + tYearSKU.getOriginalPrice();
+                tYearValue = "  " + tYearSKU.getSubscriptionOfferDetails().get(0).getPricingPhases().getPricingPhaseList().get(0).getFormattedPrice();
         }
 
         RadioButton tMonthText = view.findViewById(R.id.mMonthRadio);
@@ -162,8 +162,8 @@ public class SubscribeFragment extends Fragment implements PurchaseHelper.Purcha
         //anonymous Block to change Text For Discount
 
         if (!tYearValue.trim().equals("....") && !tMonthValue.trim().equals("....")) {
-            Float mMonthlyCharge = (float) App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.monthly_purchased).getPriceAmountMicros() / 1000000;
-            Float mYearlyCharge = (float) App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.yearly_purchased).getPriceAmountMicros() / 1000000;
+            Float mMonthlyCharge = (float) App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.monthly_purchased).getSubscriptionOfferDetails().get(0).getPricingPhases().getPricingPhaseList().get(0).getPriceAmountMicros() / 1000000;
+            Float mYearlyCharge = (float) App.get().getPurchaseHelper().getSubscribeDetailsForID(Constant.yearly_purchased).getSubscriptionOfferDetails().get(0).getPricingPhases().getPricingPhaseList().get(0).getPriceAmountMicros() / 1000000;
 
             float mTotalDiscount = ((mMonthlyCharge * 12) - mYearlyCharge) / 12;
             float mPerMonth = (mMonthlyCharge - mTotalDiscount);
@@ -360,7 +360,7 @@ public class SubscribeFragment extends Fragment implements PurchaseHelper.Purcha
             RadioButton tYearText = view.findViewById(R.id.mYearRadio);
             // Disable the radio button when the user subscribe to any of the program
             if (App.get().getPurchaseHelper().isAlreadySubscribed()) {
-                String purchasedSKU = App.get().getPurchaseHelper().getPurchasedSKU().getSku();
+                String purchasedSKU = App.get().getPurchaseHelper().getPurchasedSkuString();
                 //"If" will run when the user subscribe to monthly program
                 if (purchasedSKU.equals(Constant.monthly_purchased)) {
                     tMonthText.setAlpha(0.5f);
@@ -428,3 +428,8 @@ public class SubscribeFragment extends Fragment implements PurchaseHelper.Purcha
     }
 
 }
+
+
+
+
+
