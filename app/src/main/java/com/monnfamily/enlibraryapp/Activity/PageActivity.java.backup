@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -755,8 +754,13 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
         try {
             ReadOutTextAnimation.getInstance().stopReadOut();
             Page mCurrentPage = manager.getCurrentBook().getPageDetailsForNumber(mPageNumber);
-            // Check if audio duration data is available for text animation
-            boolean hasAudioDuration = mCurrentPage.getPageAudioDurationJSON() != null;
+            if (mCurrentPage.getPageAudioDurationJSON() == null) {
+                Toast.makeText(getApplicationContext(), "Content not available for this book. please try again later", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), LibraryViewActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                return;
+            }
             File imgFile = new File(App.get().getBookPath(mBookID + ""), Constant.BOOK_PAGE_IMAGE + mPageNumber + ".png");
             if (imgFile.exists()) {
                 Bitmap bookImage = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
@@ -815,11 +819,17 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
 
 
         } catch (Exception e) {
-            // Log error but don't crash - allow page to display even with partial content
-            Log.e("PageActivity", "Error loading page details: " + e.getMessage());
-            e.printStackTrace();
-            // Keep buttons visible so user can navigate
-            enableBtn();
+            btn_share.setVisibility(View.GONE);
+            btn_startover.setVisibility(View.GONE);
+            btn_next.setVisibility(View.GONE);
+            btn_back.setVisibility(View.GONE);
+            btn_play.setVisibility(View.GONE);
+            btn_home.setVisibility(View.GONE);
+            Toast.makeText(getApplicationContext(), "Content not available for this book. please try again later", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplicationContext(), LibraryViewActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            e.getMessage();
         }
     }
 
