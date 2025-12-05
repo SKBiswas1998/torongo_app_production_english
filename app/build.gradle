@@ -4,6 +4,19 @@ plugins {
 }
 
 android {
+    // Load keystore properties
+    def keystorePropertiesFile = rootProject.file("app/keystore.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
     namespace 'com.monnfamily.enlibraryapp'
     
     buildFeatures {
@@ -18,7 +31,7 @@ android {
     compileSdk 35
     
     defaultConfig {
-        applicationId "com.monnfamily.enlibraryapp"
+        applicationId "com.brimai.lovelandlibrary"
         minSdk 21
         targetSdk 35
         versionCode 45
@@ -29,6 +42,7 @@ android {
     
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
