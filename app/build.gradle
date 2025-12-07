@@ -67,7 +67,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //Subscribe Billing
-    implementation 'com.android.billingclient:billing:5.2.1'
+    implementation 'com.android.billingclient:billing:6.0.1'
 
     //Contentful
     implementation 'com.contentful.java:java-sdk:7.6.2'
