@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import androidx.core.content.FileProvider;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
@@ -314,7 +315,7 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
                     File saveFile = ScreenshotUtils.getMainDirectoryName(PageActivity.this);
 //                    File file = ScreenshotUtils.store(bookImage, "screenshot_Book_Image.jpg", saveFile);
                     File file = ScreenshotUtils.store(bookImage, "The_Lovelands_Books.jpg", saveFile);
-                    nativeShare(Uri.fromFile(file));
+                    nativeShare(FileProvider.getUriForFile(PageActivity.this, getApplicationContext().getPackageName() + ".fileprovider", file));
                 } else
                     Toast.makeText(PageActivity.this, R.string.screenshot_take_failed, Toast.LENGTH_SHORT).show();
 
@@ -355,6 +356,7 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
         if (uri != null) {
             shareIntent.setType("image/*");
             shareIntent.putExtra(Intent.EXTRA_STREAM, uri);//pass uri here
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
             shareIntent.setType("text/plain");
         }
@@ -505,7 +507,7 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
         if (b != null) {
             File saveFile = ScreenshotUtils.getMainDirectoryName(this);
             File file = ScreenshotUtils.store(b, "The_Lovelands_Books.jpg", saveFile);
-            shareScreenshot(Uri.fromFile(file));
+            shareScreenshot(FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".fileprovider", file));
         } else
 
             Toast.makeText(this, R.string.screenshot_take_failed, Toast.LENGTH_SHORT).show();
@@ -522,6 +524,7 @@ public class PageActivity extends AppCompatActivity implements View.OnClickListe
         if (uri != null) {
             intent.setType("image/*");
             intent.putExtra(Intent.EXTRA_STREAM, uri);//pass uri here
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         } else {
             intent.setType("text/plain");
         }

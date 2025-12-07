@@ -31,7 +31,7 @@ android {
     compileSdk 35
     
     defaultConfig {
-        applicationId "com.brimai.lovelandlibrary"
+        applicationId "com.brimai.lovelandkids"
         minSdk 21
         targetSdk 35
         versionCode 45
